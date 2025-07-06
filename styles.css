@@ -310,11 +310,11 @@ body {
 
 @media (max-width: 1024px) {
     .number-grid {
-        max-height: 40vh;
+        max-height: 20vh;
         height: auto;
     }
     .number-item {
-        height: calc((40vh - 16 * 2px) / 17);
+        height: calc((20vh - 16 * 2px) / 17);
         min-height: 0;
         max-height: unset;
         font-size: 1rem;
