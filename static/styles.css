@@ -327,6 +327,7 @@ body {
         justify-content: center;
     }
 }
+
 @media (max-width: 768px) {
     .number-grid {
         gap: 2px;

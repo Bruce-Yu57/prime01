@@ -1,0 +1,1 @@
+請將 styles.css 和 script.js 放在此資料夾，Flask 才能正確服務靜態檔案。 
