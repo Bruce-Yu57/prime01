@@ -383,19 +383,27 @@ body {
 }
 
 @media (max-width: 1024px) {
+    .game-area {
+        height: 60vh;
+        min-height: 60vh;
+        max-height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .number-grid {
-        height: auto;
+        height: 100%;
         gap: 2px;
     }
     .number-item {
-        height: 14px;
-        min-height: 14px;
-        max-height: 14px;
-        font-size: 0.85rem;
+        height: calc((60vh - 16 * 2px) / 17);
+        min-height: 0;
+        max-height: unset;
+        font-size: 1rem;
         border-radius: 3px;
         min-width: 0;
-        min-height: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 }
 
