@@ -384,12 +384,14 @@ body {
 
 @media (max-width: 1024px) {
     .number-grid {
-        height: 45vh;
+        height: auto;
         gap: 2px;
     }
     .number-item {
-        height: calc((45vh - 16 * 2px) / 17);
-        font-size: 0.45rem;
+        height: 18px;
+        min-height: 18px;
+        max-height: 18px;
+        font-size: 0.7rem;
         border-radius: 3px;
         min-width: 0;
         min-height: 0;
