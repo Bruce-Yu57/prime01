@@ -382,6 +382,14 @@ body {
     }
 }
 
+@media (max-width: 1024px) {
+    .number-item {
+        height: calc((70vh - 16 * 6px) / 17 * 0.7);
+        font-size: 0.63rem;
+        border-radius: 5px;
+    }
+}
+
 /* 觸控優化 */
 @media (hover: none) and (pointer: coarse) {
     .number-item {
