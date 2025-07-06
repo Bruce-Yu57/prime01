@@ -95,7 +95,7 @@ body {
     gap: 6px;
     max-width: 600px;
     width: 100%;
-    height: 70vh;
+    height: 100%; /* 只用100%，移除vh */
     align-content: stretch;
 }
 
@@ -387,21 +387,25 @@ body {
     }
 }
 
+/* --- 修正表格區域過大 --- */
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 1024px) {
     .game-area {
         height: 50vh;
         min-height: 50vh;
         max-height: 50vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .number-grid {
-        height: 50vh;
+        height: 100%;
         gap: 2px;
     }
     .number-item {
-        height: calc((50vh - 16 * 2px) / 17);
+        height: calc((100% - 16 * 2px) / 17);
         min-height: 0;
         max-height: unset;
         font-size: 1rem;
@@ -410,6 +414,24 @@ body {
         padding: 0;
         box-sizing: border-box;
     }
+}
+
+@media (max-width: 768px) {
+    .game-area {
+        height: 35vh;
+        min-height: 35vh;
+        max-height: 35vh;
+    }
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    max-width: 600px;
+    width: 100%;
+    height: 100%; /* 只用100%，移除vh */
+    align-content: stretch;
 }
 
 /* 觸控優化 */
