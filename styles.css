@@ -24,6 +24,7 @@ body {
     max-width: 1200px;
     width: 100%;
     max-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -86,31 +87,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
+    min-height: 0;
 }
 
 .number-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(17, 1fr);
     gap: 6px;
     max-width: 600px;
     width: 100%;
-    height: 100%; /* 只用100%，移除vh */
+    height: 100%;
     align-content: stretch;
 }
 
 .number-item {
-    /* 移除aspect-ratio，改用height自動壓縮 */
     min-width: 0;
     min-height: 0;
-    height: calc((70vh - 16 * 6px) / 17);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    border: 2px solid #e9ecef;
+    font-size: 1rem;
     border-radius: 7px;
-    font-size: 0.9rem;
     font-weight: bold;
     color: #2c3e50;
     cursor: pointer;
@@ -119,6 +114,10 @@ body {
     position: relative;
     overflow: hidden;
     padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .number-item:hover {
@@ -395,32 +394,37 @@ body {
 }
 
 @media (max-width: 1024px) {
+    .container {
+        height: 100vh;
+        max-height: 100vh;
+    }
     .game-area {
-        height: 50vh;
-        min-height: 50vh;
-        max-height: 50vh;
+        flex: 1;
+        min-height: 0;
     }
     .number-grid {
-        height: 100%;
         gap: 2px;
     }
     .number-item {
-        height: calc((100% - 16 * 2px) / 17);
-        min-height: 0;
-        max-height: unset;
-        font-size: 1rem;
+        font-size: 0.9rem;
         border-radius: 3px;
-        min-width: 0;
-        padding: 0;
-        box-sizing: border-box;
     }
 }
-
 @media (max-width: 768px) {
+    .container {
+        height: 100vh;
+        max-height: 100vh;
+    }
     .game-area {
-        height: 35vh;
-        min-height: 35vh;
-        max-height: 35vh;
+        flex: 1;
+        min-height: 0;
+    }
+    .number-grid {
+        gap: 2px;
+    }
+    .number-item {
+        font-size: 0.8rem;
+        border-radius: 2px;
     }
 }
 
