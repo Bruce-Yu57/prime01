@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>質數學習遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 標題區域 -->
+        <header class="header">
+            <h1>🔢 質數學習遊戲</h1>
+            <p class="subtitle">請選擇所有非質數，留下質數不被選中</p>
+        </header>
+
+        <!-- 數字表格區域 -->
+        <div class="game-area">
+            <div class="number-grid" id="numberGrid">
+                <!-- JavaScript 動態生成 1-100 的數字 -->
+            </div>
+        </div>
+
+        <!-- 操作說明（移到表格下方） -->
+        <div class="instructions">
+            <div class="instruction-item">
+                <span class="icon">👆</span>
+                <span>點選數字進行選擇</span>
+            </div>
+            <div class="instruction-item">
+                <span class="icon">👆</span>
+                <span>滑動手指批量選擇</span>
+            </div>
+            <div class="instruction-item">
+                <span class="icon">✅</span>
+                <span>選擇完畢後點擊檢查</span>
+            </div>
+        </div>
+
+        <!-- 控制按鈕區域 -->
+        <div class="controls">
+            <button class="btn btn-primary" id="checkBtn">
+                <span class="btn-icon">🔍</span>
+                檢查答案
+            </button>
+            <button class="btn btn-secondary" id="resetBtn">
+                <span class="btn-icon">🔄</span>
+                重新開始
+            </button>
+        </div>
+
+        <!-- 結果顯示區域 -->
+        <div class="result-area" id="resultArea" style="display: none;">
+            <div class="result-content">
+                <div class="score-display">
+                    <span class="score-label">正確率：</span>
+                    <span class="score-value" id="scoreValue">0%</span>
+                </div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+
+        <!-- 統計資訊 -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">已選擇：</span>
+                <span class="stat-value" id="selectedCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">質數數量：</span>
+                <span class="stat-value" id="primeCount">25</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
